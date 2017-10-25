@@ -1,1 +1,0 @@
-if cond stmt else if cond stmt else stmt

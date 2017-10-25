@@ -1,0 +1,9 @@
+if cond stmt else if cond stmt else stmt
+if cond if cond stmt else stmt
+if cond if cond stmt else if cond stmt else stmt
+if cond if cond stmt else if cond stmt else stmt else if cond stmt
+if cond if cond if cond stmt else stmt
+if cond stmt
+stmt
+if cond stmt else if cond stmt
+

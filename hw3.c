@@ -14,12 +14,12 @@ int yywrap() {
 }
 
 void accept() {
-    printf("\naccept");
+    printf("accept\n");
     exit(0);
 }
 
 void regect() {
-    printf("\nregect");
+    printf("regect\n");
     exit(0);
 }
 
@@ -63,7 +63,7 @@ void main() {
         top = peek();
         switch (c) {
         case IF:
-            printf("if ");
+            //printf("if ");
             switch(top) {
             case 0:             
             case I:     
@@ -72,22 +72,23 @@ void main() {
             }
             break;
         case COND:
-            printf("cond ");
+            //printf("cond ");
             switch(top) {
                 case IF:    pop(); push(I); break;
                 default:    regect(); break;
             }
             break;
         case ELSE:
-            printf("else ");
+            //printf("else ");
             switch(top) {
                 case STMT:  push(E); break;
                 default:    regect(); break;
             }
             break;
         case STMT:
-            printf("stmt ");
+            //printf("stmt ");
             switch(top) {
+		case 0:     
                 case I:     push(STMT); break;
                 case E:     push(STMT); reduce(); break;
             default:        regect(); break;
